@@ -7,13 +7,13 @@ module.exports = function (app) {
   const { Schema } = mongooseClient;
   const sucursal = new Schema({
 
-    colonia_id: {
+    colonia: {
       type:  Schema.Types.ObjectId,
       required: true,
       ref: 'colonia'
     },
 
-    text: { type: String, required: true }
+    name: { type: String, required: true }
   }, {
     timestamps: true
   });

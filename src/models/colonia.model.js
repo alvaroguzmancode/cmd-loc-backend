@@ -6,7 +6,8 @@ module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
   const { Schema } = mongooseClient;
   const colonia = new Schema({
-    text: { type: String, required: true }
+    name: { type: String, required: true },
+    municipio: {type: Schema.Types.ObjectId, ref: 'municipio'}
   }, {
     timestamps: true
   });
